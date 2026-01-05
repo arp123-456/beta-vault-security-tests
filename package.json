@@ -1,0 +1,24 @@
+{
+  "name": "beta-vault-security-tests",
+  "version": "1.0.0",
+  "description": "Security testing suite for Beta Vault - Donation Attack & Flash Loan Oracle Manipulation",
+  "scripts": {
+    "test": "hardhat test",
+    "test:donation": "hardhat test test/DonationAttack.test.js",
+    "test:flashloan": "hardhat test test/FlashLoanAttack.test.js",
+    "test:all": "node scripts/run-security-tests.js",
+    "compile": "hardhat compile",
+    "tenderly:setup": "node scripts/tenderly-setup.js"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.0.3",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0",
+    "chai": "^4.3.10",
+    "ethers": "^6.9.0"
+  }
+}
